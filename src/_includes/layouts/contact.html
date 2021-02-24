@@ -1,0 +1,52 @@
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    {% include "partials/meta-info.html" %}
+    <link rel="stylesheet" href="/css/tailwind.css"/>
+  </head>
+  <body>
+    <div class="site-wrap bg-gray-200">
+      {% include "partials/site-head.html" %}
+      <main tabindex="-1" id="main-content">
+        <article>
+          {% include "partials/page-header.html" %}
+        </article>
+
+        <div class="[ wrapper ] bg-gray-200 mx-auto w-full h-full pt-10">
+          <div class="relative wrap">
+            <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-4"></div>
+            <!-- 1 timeline -->
+            {% for item in contact.timelineItems %}
+              <div class="{% if not loop.last %}mb-20{% endif %} flex justify-between w-full">
+                <span class="{% if loop.first %}animate-ping{% endif %} absolute inline-flex rounded-full w-8 h-8 bg-gray-800 opacity-75"></span>
+                <div class="z-20 flex absolute items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                  <h1 class="mx-auto font-semibold text-lg text-white">{{ loop.index }}</h1>
+                </div>
+                <div class="order-1 w-full pl-12">
+                  <h3 class="mb-3 font-bold text-gray-800 text-xl md:text-2xl">{{ item.title }}</h3>
+                  <p class="text-md md:text-lg leading-relaxed tracking-wide text-gray-900 text-opacity-100">{{ item.content }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          {% include "partials/contact-form.html" %}
+        </div>
+      </div>
+
+    </main>
+    <footer role="contentinfo" class="site-foot mt-40 pt-32 bg-darkShade text-coolGray-200 relative overflow-visible">
+      <div class="wrapper">
+        {% include "partials/site-footer.html"%}
+      </div>
+    </footer>
+  </div>
+  <script src="/js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW3WVT06abi4oUfCLutoWoPjk-s6PFyak&libraries&callback=initAutocomplete&libraries=places&v=weekly" async="async"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "timelineItems": [
+    {
+      "title": "📝 Fill out the form",
+      "content": "If you don't want to or have a quick question, email us or call us instead!"
+    },
+    {
+      "title": "📞 Phone call",
+      "content": "We'll call you, get some more info about your project, answer your questions, and schedule an in person estimate so we can get you accurate pricing."
+    },
+    {
+      "title": "ℹ️ In person estimate",
+      "content": "Hardie siding projects are big projects.  We need your input on what you want so we can accurately price the project.  We'll get all the details, and measure out your home."
+    },
+    {
+      "title": "🧮 Cost calculation",
+      "content": "We'll get material quotes from our suppliers, check availability for the type of siding you want, and work out any specifics."
+    },
+    {
+      "title": "🧰 Custom, detailed estimate",
+      "content": "We'll compile all the info and email over a detailed quote customized for your project.  Review at your leisure and we'll answer any questions or make any adjustments you require."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "titleText": "Service Areas",
+      "serviceAreaItems": [
+        {
+          "text": "Lee's Summit, MO"
+        },
+        {
+          "text": "Overland Park, KS"
+        },
+        {
+          "text": "Kansas City, MO"
+        }
+      ]
+    },
+    {
+      "titleText": "Company",
+      "companyItems": [
+        {
+          "text": "Terms of Service",
+          "url": "/terms-of-service/"
+        },
+        {
+          "text": "About Us",
+          "url": "/about-us/"
+        },
+        {
+          "text": "Contact Us",
+          "url": "/contact/"
+        },
+        {
+          "text": "Why Hardie?",
+          "url": "/why-hardie/"
+        }
+      ]
+    }
+  ]
+}

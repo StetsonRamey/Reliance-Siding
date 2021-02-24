@@ -1,0 +1,71 @@
+/* // BLOCKS */
+@import "blocks/_people.css";
+@import "blocks/_page-content.css";
+@import "blocks/button.css";
+@import "blocks/nav.css";
+@import "blocks/hero_fancy.css";
+@import "blocks/_custom-design.css";
+/* // UTILITIES */
+@import "utilities/_auto-grid.css";
+@import "utilities/_slanted-bg.css";
+@import "utilities/_frame.css";
+/* // Tailwind stuff */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    @apply font-sans text-base bg-coolGray-100 text-coolGray-800;
+  }
+
+  a:not([class]) {
+    color: currentColor;
+    @apply underline;
+    text-decoration-color: theme("colors.carrot.200");
+  }
+
+  :focus {
+    outline: 2px dashed theme('colors.carrot.300');
+    outline-offset: 0.25rem;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-black leading-tight;
+  }
+
+  ::selection {
+    @apply text-dark;
+
+    background: rgba(theme('colors.lightGlare'), 0.99);
+  }
+}
+
+@layer utilities {
+  .flow {
+    --flow-space: 1.77em;
+  }
+  .flow > * + * {
+    margin-top: var(--flow-space);
+  }
+  .radius {
+    @apply rounded;
+  }
+  .site-wrap {
+    @apply relative overflow-x-hidden;
+  }
+  .wrapper {
+    @apply max-w-5xl py-0 px-5 ml-auto mr-auto relative;
+  }
+  .visually-hidden {
+    @apply border-0 h-auto m-0 overflow-hidden p-0 absolute w-px whitespace-nowrap;
+    clip: rect(0 0 0 0);
+  }
+}

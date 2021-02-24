@@ -1,0 +1,7 @@
+.button {
+  @apply rounded-md inline-block py-4 px-8 bg-green-400 text-coolGray-700 font-bold border-2 border-coolGray-700 uppercase no-underline text-center hover:bg-green-500 hover:text-dark;
+
+  &[data-variant="ghost"] {
+    @apply bg-darkShade border-carrot-300 text-carrot-300 hover:bg-darkGlare;
+  }
+}

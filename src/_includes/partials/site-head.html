@@ -1,0 +1,19 @@
+<a class="sr-only [ skip-link ] [ button ]" href="#main-content">Skip to content</a>
+<header role="banner" class="py-7">
+  <div class="wrapper">
+    <div class="flex flex-wrap justify-between items-center md:space-x-7">
+      <a href="/" aria-label="{{ site.name }} - home" class="flex-shrink-0">
+        {% include "partials/brand.svg" %}
+      </a>
+      <nav class="py-6 leading-4 font-black [ nav ] [ site-head__nav ] [ font-sans ]" aria-label="Primary navigaton">
+        <ul class="flex flex-wrap -mr-4 sm:mr-0">
+          {% for item in navigation.items %}
+            <li class="pt-4 mr-4">
+              <a class="no-underline block relative" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a >
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

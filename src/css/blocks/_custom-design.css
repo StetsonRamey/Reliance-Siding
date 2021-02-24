@@ -1,0 +1,16 @@
+.featured-work {
+  @screen sm {
+    &__intro {
+      @apply col-start-1 col-end-13 self-end;
+    }
+
+    &__item {
+      &:nth-child(odd) {
+        @apply col-start-1 col-end-8;
+      }
+      &:nth-child(even) {
+        @apply col-start-13 col-end-6;
+      }
+    }
+  }
+}

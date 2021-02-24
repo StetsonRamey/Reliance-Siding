@@ -1,0 +1,29 @@
+{
+  "colorsThatLast": {
+    "eyebrow": "Colors that last",
+    "title": "Color that stands up to the elements",
+    "summary": "With James Hardie's baked-on ColorPlus® Technology, your paint will resist fading, chipping, cracking, or peeling longer than any field applied paint application.  Better looks and less maintenance mean less stress for you.",
+    "image": "/images/hardie/lap-siding-blue-932.jpg",
+    "imageAlt": "James hardie colorplus® technology"
+  },
+  "customDesign": {
+    "eyebrow": "Custom Design",
+    "title": "Any look you want",
+    "summary": "You can do any popular siding style and fit almost any aesthetic with James Hardie siding products.  And with the giant spectrum of ColorPlus® color available, the hardest thing you'll have to do is decide on one.",
+    "imageLap": "/images/hardie/blue-lap-1000.jpg",
+    "imageLapAlt": "Hardie lap siding on a covered porch",
+    "imageShingle": "/images/hardie/shingle-lap-combo-932.jpg",
+    "imageShingleAlt": "Hardie shingle on an upper gable",
+    "imagePanel": "/images/hardie/vertical-panel-860.jpg",
+    "imagePanelAlt": "Hardie Vertical Panel Siding",
+    "imageBatten": "/images/hardie/white-batten-860.jpg",
+    "imageBattenAlt": "Hardie Batten Board in White"
+  },
+  "superiorDurability": {
+    "eyebrow": "Superior Durability",
+    "title": "Designed to last a lifetime",
+    "summary": "James Hardie invented fiber cememnt siding decades ago and refine the product every year.  Of the fiber cement products available in the Kansas City, Lee's Summit, Overland Park area, Hardie is the best.",
+    "image": "/images/hardie/hardie-shingle-3000.jpg",
+    "imageAlt": "James Hardie Lap Siding on residential home"
+  }
+}

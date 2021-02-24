@@ -1,0 +1,13 @@
+<article>
+  <div class="[ wrapper ] [ flow ]">
+    <figure class="relative">
+      <div class="flex justify-center">
+        <img src="{{ item.image }}" alt="{{ item.alt }}" class="md:w-11/12 h-80 object-cover [ rounded ]">
+      </div>
+      <figcaption class="py-3 sm:py-0" style="width:calc(100% - 0.5rem">
+        <h2 class="p-3 text-2xl rounded bg-pacific-200 leading-tight sm:absolute sm:bottom-36 sm:-left-1 sm:text-3xl md:text-4xl">{{ item.title }}</h2>
+        <p class="pt-6 text-xl leading-relaxed">{{ item.summary }}</p>
+      </figcaption>
+    </figure>
+  </div>
+</article>

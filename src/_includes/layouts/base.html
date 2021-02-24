@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    {% include "partials/meta-info.html" %}
+    <link rel="stylesheet" href="/css/tailwind.css"/>
+  </head>
+  <body>
+    <div class="site-wrap">
+      {% include "partials/site-head.html" %}
+      <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+      </main>
+      <footer role="contentinfo" class="site-foot bg-darkShade text-coolGray-200 relative mt-60 overflow-visible">
+        <svg viewbox="0 100 1440 200" class="fill-current text-coolGray-100 absolute top-0 hidden w-full md:block">
+          <path d="M0 192l120-5.3c120-5.7 360-15.7 600-16 240 .3 480 10.3 600 16l120 5.3V0H0z"></path>
+        </svg>
+        {% include "partials/cta.html" %}
+        <div class="wrapper">
+          {% include "partials/site-footer.html"%}
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

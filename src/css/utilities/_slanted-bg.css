@@ -1,0 +1,21 @@
+.slanted_bg_grid {
+  display: grid;
+  grid-template-rows: 1.36rem minmax(0, 2fr) 1.36rem auto;
+
+  > * {
+    grid-column: 1;
+  }
+
+  &__media {
+    grid-row: 2/3;
+    @apply relative;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+  .slanted_bg {
+    @apply mx-8 rounded-xl transform -rotate-3 border-4 shadow-lg;
+    grid-row: 1/4;
+  }
+}

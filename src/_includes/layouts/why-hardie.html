@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+  <article>
+    {% include "partials/page-header.html" %}
+  </article>
+  <div class="pt-14">
+
+    {% set item = hardie.superiorDurability %}
+    {% include "partials/why-single-photo.html" %}
+
+    {% include "partials/why-mult-photo.html" %}
+
+    {% set item = hardie.colorsThatLast %}
+    {% include "partials/why-single-photo.html" %}
+
+  </div>
+
+{% endblock content %}

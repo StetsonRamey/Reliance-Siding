@@ -1,0 +1,39 @@
+{
+  "rname": "hardie-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "watch:css": "postcss src/css/styles.css -o dist/css/tailwind.css --config ./postcss.config.js -w",
+    "watch:eleventy": "ELEVENTY_ENV=development npx eleventy --watch --quiet",
+    "watch:bsync": "browser-sync start --server ./dist -w --no-open --no-notify --no-ghost-mode",
+    "start": "npm run clean && cross-env NODE_ENV=developement concurrently \"npm run watch:bsync\" \"npm run watch:css\" \"npm run watch:eleventy\"",
+    "build:css": "NODE_ENV=production postcss src/css/styles.css -o dist/css/tailwind.css --config ./postcss.config.js",
+    "preproduction": "npm run clean && npm run build:css",
+    "production": "cross-env NODE_ENV=production eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-cache-assets": "^2.0.4",
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.2.1",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "moment": "^2.29.1",
+    "postcss": "^8.2.4",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.3",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "imagemin": "git+https://github.com/imagemin/imagemin.git#bfd7c547045f68ed92243c6a772f6265a08a687f",
+    "netlify-cli": "^3.7.1",
+    "postcss-cli": "^8.3.1",
+    "terser": "^5.6.0"
+  }
+}

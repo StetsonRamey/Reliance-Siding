@@ -1,0 +1,70 @@
+<form action="" onsubmit="return false">
+  <div class="pt-12 max-w-2xl mx-auto divide-gray-700">
+    <div class="mt-8">
+      <h2 class="text-lg font-bold mb-6">Your Contact Info</h2>
+      <div class="grid grid-cols-1 gap-6">
+        <label class="block">
+          <span class="text-gray-700">First name</span>
+          <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Last name</span>
+          <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Email address</span>
+          <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="email@example.com"/>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Phone number</span>
+          <input id="phone-number" onkeydown="phoneNumberFormatter()" type="tel" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="(816) 123-4567"/>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Type of project</span>
+          <select class="block w-full mt-1 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200">
+            <option></option>
+            <option>Full reside</option>
+            <option>Partial reside (at least 1 full side)</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="mt-14">
+      <h2 class="text-lg font-bold my-6">Your Address</h2>
+      <div class="grid grid-cols-1 gap-6">
+        <label class="block">
+          <span class="text-gray-700">Street Address</span>
+          <input id="autocomplete" onFocus="geolocate()" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="123 Arrowhead Dr"/>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">City</span>
+          <input id="locality" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">State</span>
+          <select id="administrative_area_level_1" class="block w-full mt-1 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200">
+            <option></option>
+            <option value="MO">MO</option>
+            <option value="KS">KS</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Zip Code</span>
+          <input id="postal_code" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+        </label>
+      </div>
+    </div>
+    <div class="mt-14">
+      <h2 class="text-lg font-bold my-6">Anything you'd like us to know about your project?</h2>
+      <div class="grid grid-cols-1 gap-6">
+        <label class="block">
+          <span class="text-gray-700">Message</span>
+          <textarea class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" rows="3"></textarea>
+        </label>
+      </div>
+    </div>
+    <div class="pt-10">
+      <input class="bg-pacific-400 px-16 py-4 text-gray-700 hover:bg-cyan-800 hover:text-gray-100 rounded text-3xl" type="submit" value="Submit"/>
+    </div>
+  </form>

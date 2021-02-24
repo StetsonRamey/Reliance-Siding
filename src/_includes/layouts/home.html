@@ -1,0 +1,60 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+  <div class="wrapper">
+    <article class="intro mt-10 mb-8">
+      <div class="[ intro__header ] mt-6 mb-10 sm:my-20 ">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight[ intro__heading ]">
+          {{ intro.eyebrow }}.
+          <em class="font-medium">{{ intro.main }}</em >
+        </h1>
+      </div>
+      <div class="[ intro__content ] [ flow ] mb-16">
+        <h3 class="text-2xl sm:text-4xl lg:text-5xl">Hi 👋, we're
+          <span class="underline">{{ site.companyName }}</span>
+        </h3>
+        <p class="text-xl md:text-2xl sm:leading-10 font-medium">{{ intro.summary }}</p>
+        <a href="{{ intro.buttonUrl }}" class="button" data-variant="ghost">{{ intro.buttonText }}</a>
+      </div>
+
+      <div class="my-16 text-2xl text-center md:hidden">Our specialty is
+        <em class="text-4xl block">James Hardie Siding.</em>
+      </div>
+      <div class="[ intro__hero ]">
+        <div class="[ slanted_bg ]"></div>
+        <div class="[ intro__hero__overlay_image_text ] hidden md:block">
+          <h1 class="text-darkShade text-2xl">Our specialty is
+            <em class="text-darkGlare text-6xl">Hardie Siding</em>
+          </h1>
+
+        </div>
+        <div class="[ intro__hero__media ]">
+          <img class="[ intro__hero__image ] [ radius ]" src="{{ intro.image }}" alt="{{ intro.imageAlt }}"/>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  {# {% set ctaContent = primaryCTA %}
+  {% include "partials/cta.html" %} #}
+
+  <div class="my-16 bg-dark text-lightShade">
+    <svg  height="35" class="w-full fill-current text-coolGray-100 xl:hidden"><path d="M0 0v35L1441 0H0z"></path></svg>
+    <div class="py-16 lg:py-24">
+      <h1 class="text-6xl text-center font-normal">Why James Hardie Siding?
+      </h1>
+    </div>
+    <svg height="35" class="w-full fill-current text-coolGray-100 transform rotate-180 xl:hidden"><path d="M0 0v35L1441 0H0z"></path></svg>
+  </div>
+
+    {% set featurePrefix = hardie.superiorDurability %}
+    {% include "partials/std-feature-component.html" %}
+
+    {% include "partials/custom-design.html" %}
+
+    {% set featurePrefix = hardie.colorsThatLast %}
+    {% include "partials/std-feature-component.html" %}
+
+  {% endblock %}

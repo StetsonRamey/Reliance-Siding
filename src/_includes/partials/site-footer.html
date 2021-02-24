@@ -1,0 +1,30 @@
+<div class="flex flex-col md:flex-row pb-24 md:space-x-24">
+  {% for item in footer.items %}
+    <ul>
+      <li>
+        <h2 class="text-2xl mt-8 pb-6">{{ item.titleText }}</h2>
+        {% if item.serviceAreaItems %}
+          {% for area in item.serviceAreaItems %}
+            <ul class="text-lg pb-2">
+              <li>{{ area.text }}</li>
+            </ul>
+          {% endfor %}
+        {% endif %}
+        {% if item.companyItems %}
+          {% for item in item.companyItems %}
+            <ul class="text-lg pb-2">
+              <a href="{{ item.url }}">
+                <li>{{ item.text }}</li>
+              </a>
+            </ul>
+          {% endfor %}
+        {% endif %}
+      </li>
+    </ul>
+  {% endfor %}
+</div>
+<div class="py-16 border-t border-carrot-300">
+  <a href="/" aria-label="{{ site.name }} - home" class="flex-shrink-0">
+    {% include "partials/Footer-Logo.svg" %}
+  </a>
+</div>

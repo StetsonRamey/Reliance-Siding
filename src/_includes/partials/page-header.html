@@ -1,0 +1,12 @@
+<div class="bg-lightShade text-darkShade py-10">
+  <div class="[ wrapper ] [ flow ]">
+    <h1 class="text-4xl sm:text-5xl" data-highlight="primary">
+      {{ pageHeaderTitle }}
+    </h1>
+    {% if pageHeaderSummary %}
+      <div class="text-xl">
+        {{ pageHeaderSummary | safe }}
+      </div>
+    {% endif %}
+  </div>
+</div>

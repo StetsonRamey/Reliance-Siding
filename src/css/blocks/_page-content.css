@@ -1,0 +1,43 @@
+.page-content {
+  @apply leading-loose;
+  padding: 2rem 1.25rem !important;
+
+  > * {
+    max-width: 65ch;
+  }
+
+  blockquote {
+    border-inline-start: 1rem solid theme("colors.quinary");
+    padding-inline-start: 1.77rem;
+    padding-top: 1.33rem;
+    padding-bottom: 1.33rem;
+    font-style: italic;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  ol,
+  ul {
+    padding-inline-start: 3.15rem;
+  }
+
+  li + li {
+    @apply mt-7;
+  }
+
+  h2,
+  h3 {
+    --flow-space: 3.15rem;
+  }
+
+  h2 + *,
+  h3 + * {
+    --flow-space: 0.75rem;
+  }
+}
