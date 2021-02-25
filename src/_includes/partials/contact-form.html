@@ -1,27 +1,27 @@
-<form action="" onsubmit="return false">
+<form action="contact-page" method="POST" data-netlify="true" onsubmit="return false">
   <div class="pt-12 max-w-2xl mx-auto divide-gray-700">
     <div class="mt-8">
       <h2 class="text-lg font-bold mb-6">Your Contact Info</h2>
       <div class="grid grid-cols-1 gap-6">
         <label class="block">
           <span class="text-gray-700">First name</span>
-          <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+          <input type="text" name="first-name" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
         </label>
         <label class="block">
           <span class="text-gray-700">Last name</span>
-          <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+          <input type="text" name="last-name" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
         </label>
         <label class="block">
           <span class="text-gray-700">Email address</span>
-          <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="email@example.com"/>
+          <input type="email" name="email" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="email@example.com"/>
         </label>
         <label class="block">
           <span class="text-gray-700">Phone number</span>
-          <input id="phone-number" onkeydown="phoneNumberFormatter()" type="tel" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="(816) 123-4567"/>
+          <input id="phone-number" onkeydown="phoneNumberFormatter()" type="tel" name="phone-number" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="(816) 123-4567"/>
         </label>
         <label class="block">
           <span class="text-gray-700">Type of project</span>
-          <select class="block w-full mt-1 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200">
+          <select name="project[]" class="block w-full mt-1 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200">
             <option></option>
             <option>Full reside</option>
             <option>Partial reside (at least 1 full side)</option>
@@ -35,15 +35,15 @@
       <div class="grid grid-cols-1 gap-6">
         <label class="block">
           <span class="text-gray-700">Street Address</span>
-          <input id="autocomplete" onFocus="geolocate()" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="123 Arrowhead Dr"/>
+          <input id="autocomplete" name="address" onFocus="geolocate()" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder="123 Arrowhead Dr"/>
         </label>
         <label class="block">
           <span class="text-gray-700">City</span>
-          <input id="locality" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+          <input id="locality" type="text" name="city" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
         </label>
         <label class="block">
           <span class="text-gray-700">State</span>
-          <select id="administrative_area_level_1" class="block w-full mt-1 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200">
+          <select id="administrative_area_level_1" name="state[]" class="block w-full mt-1 rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200">
             <option></option>
             <option value="MO">MO</option>
             <option value="KS">KS</option>
@@ -51,7 +51,7 @@
         </label>
         <label class="block">
           <span class="text-gray-700">Zip Code</span>
-          <input id="postal_code" type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
+          <input id="postal_code" type="text" name="zip" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" placeholder=""/>
         </label>
       </div>
     </div>
@@ -60,7 +60,7 @@
       <div class="grid grid-cols-1 gap-6">
         <label class="block">
           <span class="text-gray-700">Message</span>
-          <textarea class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" rows="3"></textarea>
+          <textarea name="message" class="mt-1 block w-full rounded-md bg-gray-100 border-none focus:ring-2 focus:ring-quinaryShade focus:ring-offset-4 focus:ring-offset-gray-200" rows="3"></textarea>
         </label>
       </div>
     </div>

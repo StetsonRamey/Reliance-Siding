@@ -1,3 +1,5 @@
+/* // TAILWIND RESETS FIRST */
+@import "tailwindcss/base";
 /* // BLOCKS */
 @import "blocks/_people.css";
 @import "blocks/_page-content.css";
@@ -10,7 +12,6 @@
 @import "utilities/_slanted-bg.css";
 @import "utilities/_frame.css";
 /* // Tailwind stuff */
-@import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
