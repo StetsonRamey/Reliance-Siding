@@ -1,12 +1,12 @@
 
 
 
-module.exports = {
+module.exports = ({ env }) => ({
   plugins: [
     require("postcss-import"),
     require("tailwindcss"),
     require("postcss-nested")({bubble: ['screen']}),
     require("autoprefixer"),
-    require("cssnano")({preset: 'default'})
+    env === 'production' ? require("cssnano")({preset: 'default'})(): false,
   ],
-};
+});
