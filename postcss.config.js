@@ -1,12 +1,14 @@
-
-
-
-module.exports = ({ env }) => ({
+const postCssConfig = {
   plugins: [
     require("postcss-import"),
     require("tailwindcss"),
-    require("postcss-nested")({bubble: ['screen']}),
+    require("postcss-nested")({ bubble: ["screen"] }),
     require("autoprefixer"),
-    env === 'production' ? require("cssnano")({preset: 'default'})(): false,
   ],
-});
+};
+
+if (process.env.NODE_ENV === "production") {
+  postCssConfig.plugins.push(require("cssnano")({ preset: "default" }));
+}
+
+module.exports = postCssConfig;
